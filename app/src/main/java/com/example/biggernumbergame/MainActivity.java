@@ -1,5 +1,6 @@
 package com.example.biggernumbergame;
 
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -48,9 +49,11 @@ public class MainActivity extends AppCompatActivity {
         if (left_number >= right_number) {
             // correct
             points++;
+            Snackbar.make(view, "Great job !!", Snackbar.LENGTH_LONG).show();
         } else {
             // incorrect
             points--;
+            Snackbar.make(view, "You SUCK !!", Snackbar.LENGTH_LONG).show();
         }
         // Update the display of points
         txtPoints.setText("Points : " + Integer.toString(points));
@@ -63,9 +66,11 @@ public class MainActivity extends AppCompatActivity {
         if (right_number >= left_number) {
             // correct
             points++;
+            Snackbar.make(view, "Amazing !!!", Snackbar.LENGTH_LONG).show();
         } else {
             // incorrect
             points--;
+            Snackbar.make(view, "Really !!!", Snackbar.LENGTH_LONG).show();
         }
         // Update the display of points
         txtPoints.setText("Points :" + Integer.toString(points));
